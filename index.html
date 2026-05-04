@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACME Car Parts</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#" class="nav-logo">ACME<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="vehicles.html">Find by Vehicle</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="#search">Deals</a></li>
+        <li><a href="#">Support</a></li>
+    </ul>
+    <div class="nav-right">
+        <button class="cart-btn" id="cart-btn">
+            &#128722; Cart
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <div class="hero-tag">&#9679; In Stock &amp; Ready to Ship</div>
+        <h1>Parts for <em>Every</em> Ride.</h1>
+        <p class="hero-sub">OEM and aftermarket components for domestic and import vehicles. Searched, sourced, shipped fast.</p>
+        <div class="hero-actions">
+            <a href="#parts" class="btn-primary">Shop All Parts</a>
+            <a href="vehicles.html" class="btn-outline">Find by Vehicle</a>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="hero-stats">
+            <div class="stat-cell">
+                <span class="num">48K</span>
+                <span class="label">SKUs in stock</span>
+            </div>
+            <div class="stat-cell">
+                <span class="num">12+</span>
+                <span class="label">Top brands</span>
+            </div>
+            <div class="stat-cell">
+                <span class="num">2-day</span>
+                <span class="label">Avg. shipping</span>
+            </div>
+            <div class="stat-cell">
+                <span class="num">99%</span>
+                <span class="label">Fit guarantee</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEARCH BAR -->
+<div class="search-bar-wrap" id="search">
+    <span class="search-label">Search</span>
+    <div class="search-input-wrap">
+        <span class="search-icon">&#128269;</span>
+        <input type="text" id="search-input" placeholder="Part name, SKU, or keyword…">
+    </div>
+    <div class="filter-selects">
+        <select id="filter-category">
+            <option value="">All Categories</option>
+            <option value="Engine">Engine</option>
+            <option value="Brakes">Brakes</option>
+            <option value="Suspension">Suspension</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Filters">Filters</option>
+            <option value="Exhaust">Exhaust</option>
+        </select>
+        <select id="filter-sort">
+            <option value="">Sort: Default</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="name">Name A–Z</option>
+        </select>
+    </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section">
+    <div class="section-header">
+        <h2 class="section-title">Categories</h2>
+        <a href="#" class="section-link">View All →</a>
+    </div>
+    <div class="categories-grid">
+        <button class="category-card" data-category="Engine">
+            <span class="cat-icon">⚙️</span>
+            <span class="cat-name">Engine</span>
+            <span class="cat-count">3,210 parts</span>
+        </button>
+        <button class="category-card" data-category="Brakes">
+            <span class="cat-icon">🛞</span>
+            <span class="cat-name">Brakes</span>
+            <span class="cat-count">1,840 parts</span>
+        </button>
+        <button class="category-card" data-category="Suspension">
+            <span class="cat-icon">🔩</span>
+            <span class="cat-name">Suspension</span>
+            <span class="cat-count">2,105 parts</span>
+        </button>
+        <button class="category-card" data-category="Electrical">
+            <span class="cat-icon">⚡</span>
+            <span class="cat-name">Electrical</span>
+            <span class="cat-count">4,600 parts</span>
+        </button>
+        <button class="category-card" data-category="Filters">
+            <span class="cat-icon">🌀</span>
+            <span class="cat-name">Filters</span>
+            <span class="cat-count">890 parts</span>
+        </button>
+        <button class="category-card" data-category="Exhaust">
+            <span class="cat-icon">💨</span>
+            <span class="cat-name">Exhaust</span>
+            <span class="cat-count">1,220 parts</span>
+        </button>
+    </div>
+</section>
+
+<!-- PARTS LISTING -->
+<section class="section" id="parts">
+    <div class="section-header">
+        <h2 class="section-title">Featured Parts</h2>
+        <a href="#" class="section-link">View Catalog →</a>
+    </div>
+    <div class="parts-grid" id="parts-grid">
+        <!-- Populated by main.js -->
+    </div>
+    <p id="no-results">No parts match your search.</p>
+</section>
+
+<!-- PROMO BAND -->
+<div class="promo-band">
+    <div>
+        <h2>Free shipping on orders over $75</h2>
+        <p>Use code ACMESHIP at checkout — no minimums on select brands.</p>
+    </div>
+    <button class="btn-dark">Shop Deals</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="#" class="nav-logo">ACME<span>.</span></a>
+            <p>Quality OEM and aftermarket parts for domestic and import vehicles since 1998. Real parts. Real fast.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="#">All Parts</a></li>
+                <li><a href="#">Deals &amp; Clearance</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Top Brands</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Order Tracking</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Fitment Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 ACME Car Parts, Inc.</p>
+        <p>Made for DBMS class</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

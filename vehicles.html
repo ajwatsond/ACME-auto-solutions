@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search by Vehicle — ACME Car Parts</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo">ACME<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Catalog</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="index.html#search">Deals</a></li>
+        <li><a href="#">Support</a></li>
+    </ul>
+    <div class="nav-right">
+        <button class="cart-btn" id="cart-btn">
+            &#128722; Cart
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+    <div class="page-header-text">
+        <div class="hero-tag">&#128663; Find parts for your car</div>
+        <h1>Search by <em>Vehicle</em></h1>
+        <p class="hero-sub">Select your year, make, and model to see every compatible part we carry.</p>
+    </div>
+</header>
+
+<!-- VEHICLE SELECTOR -->
+<section class="vehicle-selector-wrap">
+    <div class="vehicle-selector">
+        <div class="selector-step" id="step-year">
+            <label class="selector-label" for="sel-year">
+                <span class="step-num">01</span> Year
+            </label>
+            <select id="sel-year" class="selector-select">
+                <option value="">Select year</option>
+            </select>
+        </div>
+
+        <div class="selector-divider">›</div>
+
+        <div class="selector-step" id="step-make">
+            <label class="selector-label" for="sel-make">
+                <span class="step-num">02</span> Make
+            </label>
+            <select id="sel-make" class="selector-select" disabled>
+                <option value="">Select make</option>
+            </select>
+        </div>
+
+        <div class="selector-divider">›</div>
+
+        <div class="selector-step" id="step-model">
+            <label class="selector-label" for="sel-model">
+                <span class="step-num">03</span> Model
+            </label>
+            <select id="sel-model" class="selector-select" disabled>
+                <option value="">Select model</option>
+            </select>
+        </div>
+
+        <button class="btn-primary" id="btn-search-vehicle" disabled>Find Parts</button>
+    </div>
+
+    <!-- Recent searches -->
+    <div id="recent-searches-wrap">
+        <span class="search-label">Recent:</span>
+        <div id="recent-searches"></div>
+    </div>
+</section>
+
+<!-- RESULTS SECTION -->
+<section class="section" id="results-section" style="display: none;">
+    <div class="section-header">
+        <h2 class="section-title" id="results-title">Results</h2>
+        <div class="results-controls">
+            <select id="results-filter-category" class="filter-select-sm">
+                <option value="">All Categories</option>
+                <option value="Engine">Engine</option>
+                <option value="Brakes">Brakes</option>
+                <option value="Suspension">Suspension</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Filters">Filters</option>
+                <option value="Exhaust">Exhaust</option>
+            </select>
+            <select id="results-sort" class="filter-select-sm">
+                <option value="">Sort: Default</option>
+                <option value="price-asc">Price: Low → High</option>
+                <option value="price-desc">Price: High → Low</option>
+                <option value="name">Name A–Z</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="parts-grid" id="results-grid"></div>
+    <p id="results-none">No parts found for this vehicle.</p>
+</section>
+
+<!-- EMPTY STATE (shown before a search) -->
+<section class="empty-state" id="empty-state">
+    <div class="empty-icon">&#128663;</div>
+    <h3>Select your vehicle above</h3>
+    <p>Choose a year, make, and model to see compatible parts.</p>
+</section>
+
+<script src="js/vehicle.js"></script>
+</body>
+</html>

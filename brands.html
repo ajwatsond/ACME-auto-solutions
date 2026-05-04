@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands — ACME Car Parts</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-logo">ACME<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="vehicle.html">Find by Vehicle</a></li>
+        <li><a href="brands.html" class="nav-active">Brands</a></li>
+        <li><a href="index.html#search">Deals</a></li>
+        <li><a href="#">Support</a></li>
+    </ul>
+    <div class="nav-right">
+        <button class="cart-btn" id="cart-btn">
+            &#128722; Cart
+            <span class="cart-count" id="cart-count">0</span>
+        </button>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+    <div class="page-header-text">
+        <div class="hero-tag">&#9733; Trusted manufacturers</div>
+        <h1>Shop by <em>Brand</em></h1>
+        <p class="hero-sub">Every brand we carry is vetted for quality. OEM suppliers and aftermarket leaders, all in one place.</p>
+    </div>
+</header>
+
+<!-- BRAND SEARCH -->
+<div class="search-bar-wrap">
+    <span class="search-label">Filter</span>
+    <div class="search-input-wrap">
+        <span class="search-icon">&#128269;</span>
+        <input type="text" id="brand-search" placeholder="Search brands…">
+    </div>
+    <div class="filter-selects">
+        <select id="brand-category-filter">
+            <option value="">All Categories</option>
+            <option value="Engine">Engine</option>
+            <option value="Brakes">Brakes</option>
+            <option value="Suspension">Suspension</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Filters">Filters</option>
+            <option value="Exhaust">Exhaust</option>
+        </select>
+        <select id="brand-tier-filter">
+            <option value="">All Tiers</option>
+            <option value="OEM">OEM</option>
+            <option value="Performance">Performance</option>
+            <option value="Economy">Economy</option>
+        </select>
+    </div>
+</div>
+
+<!-- FEATURED BRANDS -->
+<section class="section" id="featured-section">
+    <div class="section-header">
+        <h2 class="section-title">Featured Brands</h2>
+    </div>
+    <div class="featured-brands-grid" id="featured-brands-grid">
+        <!-- Populated by brands.js -->
+    </div>
+</section>
+
+<!-- ALL BRANDS -->
+<section class="section" id="all-brands-section" style="padding-top: 0;">
+    <div class="section-header">
+        <h2 class="section-title">All Brands</h2>
+        <span class="brand-count-label" id="brand-count-label"></span>
+    </div>
+    <div class="brands-grid" id="brands-grid">
+        <!-- Populated by brands.js -->
+    </div>
+    <p id="brands-none">No brands match your search.</p>
+</section>
+
+<!-- BRAND PARTS MODAL -->
+<div id="brand-modal-overlay">
+    <div id="brand-modal">
+        <div id="brand-modal-header">
+            <div>
+                <p id="brand-modal-tag"></p>
+                <h2 id="brand-modal-name"></h2>
+                <p id="brand-modal-desc"></p>
+            </div>
+            <button id="brand-modal-close" aria-label="Close">&times;</button>
+        </div>
+        <div id="brand-modal-meta">
+            <span id="brand-modal-tier"></span>
+            <span id="brand-modal-cats"></span>
+        </div>
+        <div class="section-header" style="margin-top: 1.5rem;">
+            <h3 class="section-title" style="font-size: 1.25rem;">Parts from this brand</h3>
+        </div>
+        <div class="parts-grid" id="brand-modal-parts-grid"></div>
+        <p id="brand-modal-none">No parts listed for this brand yet.</p>
+    </div>
+</div>
+
+<script src="js/brands.js"></script>
+</body>
+</html>
